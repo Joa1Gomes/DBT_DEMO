@@ -9,6 +9,6 @@ with trips as(
         USER_TYPE,
         TIMESTAMPDIFF(second, TO_TIMESTAMP(START_TIME), TO_TIMESTAMP(STOPTIME)) as TRIP_DURATION
     from {{source('demo', 'BIKES')}}
-    LIMIT 10
+   
 )
 SELECT * FROM trips
